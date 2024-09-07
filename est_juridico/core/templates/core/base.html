@@ -1,0 +1,40 @@
+<!-- core/templates/core/base.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Dra. Florencia Reybet{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    {% include 'core/navbar.html' %}
+    
+    <!-- Content -->
+    <div class="container mt-5">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Footer -->
+    {% include 'core/footer.html' %}
+
+    <style>
+        .form-inline {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+        }
+    
+        .form-inline .form-control {
+            width: auto;
+            margin-right: 10px;
+        }
+    
+        .form-inline .btn {
+            margin-right: 0;
+        }
+    </style>
+</body>
+</html>
