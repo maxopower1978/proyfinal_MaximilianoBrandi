@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('login/', CustomLoginView.as_view(), name='login'),
     path('logout/', CustomLogoutView.as_view(next_page='home'), name='logout'),
+    path('editarPerfil', views.editarPerfil, name= "editarPerfil"),
 ]
